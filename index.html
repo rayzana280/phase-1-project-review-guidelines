@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        CATS!
+        </title>
+        <style>
+            div.image {
+                display:inline-block;
+                margin-left: 100px;
+            }
+
+            h1{text-align: center;}
+
+            body{background-color: #FF8C00}
+
+            #preloader{
+                background: #FF8C00 url('./image /loader.gif') no-repeat center center;
+                background-size: 10%;
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                z-index: 100;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="preloader"></div>
+        <h1>LETS GET READY FOR CATS FACTS!</h1>
+        <h2 id="counter">60</h2>
+            <div>
+                <h3>Click Me For A Cat Facts</h3>
+                <button id="button">Click!</button>
+            </div>
+            <div id="divforList">
+                <h4>The Facts You Asked For</h4>
+            </div>
+                <div class="image">
+                    <img src='./image /whiteCat.jpg' 
+                    width="300"
+                    height="300"/>
+                </div>
+                <div class="image">
+                    <img src="./image /cat2.jpg"
+                    width="300"
+                    height="300"/>
+                 </div>
+                <div class="image">
+                    <img src="./image /cat3.jpg"
+                    width="300"
+                    height="300"/>
+            </div>
+            <script src="./index.js"></script>
+    </body>
+</html>

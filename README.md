@@ -1,128 +1,187 @@
-# [Flex] Phase 1 Project Review Guidelines
+# Phase 1 Project Guidelines
 
-## Project Requirements
+## Learning Goals
 
-Make sure your project meets all the project requirements. Here's a link to the
-project guidelines:
+- Design and architect features across a frontend
+- Communicate and collaborate in a technical environment
+- Integrate JavaScript and an external API
+- Debug issues in small- to medium-sized projects
+- Build and iterate on a project MVP
 
-- [Phase 1 Project Guidelines](https://github.com/learn-co-curriculum/phase-1-javascript-project-mode)
+## Introduction
 
-We also expect you to complete the following items prior to scheduling the
-review:
+Welcome to JavaScript Project Mode!
 
-- **[GITHUB REPOSITORY]: A well-written informative README.md file**. This is
-  the business card of your project and you really want it to look great! A
-  template can be found here: [makeareadme.com](https://www.makeareadme.com/).
-  Some additional considerations:
-  - If you used someone else's pictures or material please make sure you give
-  them credit in your README.
-  - If you think your blog post and/or video are really good and would add
-  value, add them to your README.md.
-  - If you want to go above and beyond, record a few seconds of yourself
-  navigating the app and turn it into a gif. Then, add the gif in your
-  README.md. That way anyone can get a sense of how your app works without
-  leaving the README's page on GitHub!
-- **[GITHUB REPOSITORY]: A detailed commit history (30+ commits is your minimum
-  goal)**. Committing frequently is a fundamental best practice that you want to
-  acquire as soon as possible. One day you will be collaborating on projects and
-  you'll notice the importance of committing even more. Commit messages should
-  be in the present tense, 50 characters or less and they should describe the
-  changes you are committing.
-- **A video walkthrough of your app — MUST be no longer than 3 minutes**. In
-  the video try to sound as professional as possible and walk through the
-  functionality you built. A common way to record the video is to open a zoom
-  meeting, share your screen, and then hit "record". Once the recording has been
-  downloaded to your computer, upload it to YouTube Studio as "unlisted". That
-  way only people with the link will be able to watch it. You don't have to
-  share the video with anyone other than Flatiron if you don't feel comfortable.
-- **A blog post about this phase of the curriculum**. This will serve as one of
-  the seven blogs you are required to complete to graduate from Flatiron School.
-  The blog post MUST meet the following requirements:
-  - Each blog must be at least 750 words, which is an approximately 3-5 minute
-read on a blogging platform.
-  - Blogs must be about a technical aspect related to the curriculum Phase.
-  - Blog topics may be related to your project but this is not required or
-expected.
-  - Your blog must include code snippets or screenshots.
-  - If you need support on grammar, we encourage you to use a grammar service
-such as www.grammarly.com or something similar.
+You’ve worked so hard to get here and have learned a ton. Now it's time to bring
+it all together!
 
-  Please use these [Guidelines][blog-guidelines] and [Tips][blog-tips] for
-reference as you start blogging!
+For this project, you're going build a Single Page Application (**SPA**).
+Building this application will be challenging because it will integrate
+everything you've learned up to this point. Your frontend will be built with
+HTML, CSS, and JavaScript and will communicate with a public API.
 
-[blog-guidelines]: https://docs.google.com/document/d/1khn8xGYEWzNrWI-N1Mxhdtk-rd3dTiIteOoDsTXOVZI/edit
-[blog-tips]: https://docs.google.com/document/d/1i6NqCgYZd9DC25Om9agZ4lX-U_7DmjH0ZTBpOWMAn9Q/edit
+### Project Requirements
 
-## Scheduling Your Review
+1. Your app must be a HTML/CSS/JS frontend that accesses data from a public API or
+   from a db.json file using json-server. Your API or db.json should return a 
+   collection of at least 5 objects with each object having at least 3 attributes. 
+   All interactions between the client and the API should be handled
+   asynchronously and use JSON as the communication format. Try to avoid using
+   an API that requires a key. APIs that are free and require no authorization
+   will be easiest to use. For ideas, see this [list of no-auth APIs][APIs]. If
+   you would like to use an API that requires a key, please consult with your
+   instructor on how to protect that key. **NEVER push your API key to github!**
 
-To schedule your review, go to [Oncehub][]
-(https://go.oncehub.com/PhaseOneJavascriptProjectReview) and select an available
-date and time on the scheduling site. Do not book an appointment with your
-assigned Cohort Lead — be sure to choose another reviewer.
+2. Your entire app must run on a single page. There should be NO redirects or
+    reloads. In other words, your project will contain a single HTML file.
 
-[Oncehub]: https://go.oncehub.com/PhaseOneJavascriptProjectReview
+3. Use at least 3 distinct [event listeners][event-listeners] (3 events of different
+   types) that enable interactivity. What this means is that, if you had 3 click
+   events, that would only count as 1 distinct event and you would need to add at
+   least 2 more. Think search or filter functionality, toggling dark/light mode,
+   upvoting posts, etc. Each of your event listeners should also have its own unique 
+   callback function. These must be added using JavaScript's .addEventListener()
+   method. Events embedded into HTML elements and CSS will not count toward the 
+   total. Please ask your instructor if you have questions regarding this requirement.
 
-Please make sure you have satisfied all the requirements listed in the project
-requirements page (linked at the top of the page) before scheduling the meeting.
-These required components must be completed, submitted in Canvas, and submitted
-in Oncehub or your project review will be canceled by the reviewer.
+4. Your project must implement at least one instance of array iteration using
+   available array methods (`map`, `forEach`, `filter`, etc). Manipulating your
+   API data in some way should present an opportunity to implement your array
+   iteration.
 
-[review]: https://go.oncehub.com/PhaseOneJavascriptProjectReview
+5. Follow good coding practices. Keep your code DRY (Do not repeat yourself) by
+   utilizing functions to abstract repetitive code.
 
-## What To Expect From the Project Review
+### Stretch Goals
 
-Project reviews are focused on preparing you for [technical interviews][]. Treat
-project reviews as if they were technical interviews, in both attitude and
-technical presentation.
+1. Use [json-server][] in your project to persist your app's interactivity.
 
-During your project review, be prepared to:
+## Strategy, Timeline, and Tips
 
-1. Walk through the app and showcase all the functionality you built. In this
-   section, we want to make sure you satisfied all the requirements as well as
-   best practices. (~10 minutes)
-2. Explain your code from execution point to exit point. You will also be asked
-   questions that test your knowledge of JS fundamentals. Use the best technical
-   vocabulary you can. We'll help you with the words you can't remember or those
-   you find difficult to pronounce. (~15-20 minutes)
-3. Refactor code and add new functionality. (~15-20 minutes)
+### Planning
 
-If any requirements are missing or if significant gaps in understanding are
-found, be prepared to do one or all of the following:
+- Plan out your features
+- Develop user stories
+  - “As [ a user ], I want [ to perform this action ] so that
+    [ I can accomplish this goal ].”
+  - Features should not need you there to explain them to users
+- Plan out the structure of your JSON requests
 
-- Extend the application with a new feature, more data, a different domain etc.
-- Submit an improved version
-- Meet again for another Project Review
+### Project Pitches
 
-If the session reaches an hour in length, the assessment will end at that point.
+Before you start working on your project, you'll pitch your project idea to your
+instructors for approval and feedback.
 
-What won't happen:
+For your project pitch, you should include:
 
-- You won't be yelled at, belittled, or scolded
-- You won't be put on the spot without support
-- There's nothing you can do to instantly fail or blow it
+- The basic story of your application
+- The core features of your MVP
+- The API data you'll be using and how you'll use it
+- Challenges you expect to face
+- How you are meeting the requirements of the project
 
-## What is Expected of you in a Project Review
+Feel free to send this pitch to your instructor via slack asynchronously.
 
-Since Project Reviews are preparing you for [technical interviews][], we expect
-you to treat the session as a professional engagement. This is what is expected
-of you:
+### MVP ASAP
 
-- Your camera must be on
-- Please secure a quiet environment
-- Make sure that you have a stable internet connection
-- You must meet the project requirements as follows or your project review will
-  be canceled prior to taking place:
-  - All project requirements
-  - Github link submitted on Canvas and ScheduleOnce
-  - Blog link submitted on Canvas and ScheduleOnce
-  - Video link submitted on Canvas and ScheduleOnce
-  - A good quality README
-  - Blog must address a technical topic and be at least a 3 minute read
-  - Video must not exceed 3 minutes in length
-- You may not use notes
-- You may only use a single screen
-- Expect that you may need to repeat your assessment attempt
-- This is a mock technical interview modeled off of a technical job interview
-- Expect to receive helpful feedback that will help drive your coding skills
+- Build a Minimum Viable Product (MVP) as quickly as possible.
+  - Pick an API and explore it early on to ensure it will work for your need
 
-[technical interviews]: https://www.brightnetwork.co.uk/career-path-guides/technology-it-software-development/five-ways-stand-out-your-technology/what-expect-technical-interview/
+### Instructor Guidance
+
+You should strive to solve problems independently, but you also shouldn't waste
+your time stuck on a problem. A good guideline for a small bug is the rule of
+10s:
+
+- 10 minutes debugging the code
+- 10 minutes using Google and StackOverflow to try to find an answer
+- 10 minutes asking your fellow students for help
+- Asking an instructor
+
+If you seek out instructor guidance on your design from the start, they might
+help steer you into design and architectural decisions that will help you down
+the road. That will also give the instructors context for what your app is
+supposed to do, so you won't need to explain everything to them when asking for
+help debugging.
+
+### Guidelines for Staying Organized
+
+**Write down** the decisions you make about your project. This will not only
+help you think more clearly, it will also help you communicate your project to
+instructors when asking for help. In addition to writing everything down, we
+also recommend the following to help stay organized and on track:
+
+- Describe/sketch your ideas (use diagrams!).
+- Start by creating a frontend directory with the basic files you'll need
+- Next, build enough code to get some API data to work with. Don't worry about
+  building all of your async code yet, just get to the point where you can
+  access one endpoint on an API, then start working on getting that data
+  displayed.
+- Then, continue to build additional async code and frontend features.
+- Continue building features one by one.
+
+Check in with your instructors to make sure your scope and timeline are
+manageable.
+
+### JSON Server Instructions
+
+> **Note**: Using `json-server` is a stretch goal, so make sure you have a
+> working MVP before trying to set up `json-server`!
+
+You can use this [json-server template][] to generate your backend code. Using
+this template will make it easier to deploy your backend later on.
+
+[json-server template]: https://github.com/learn-co-curriculum/json-server-template
+
+If you prefer, instead of using the template, you can create a `db.json` file
+with a structure in the root of your project that looks like this:
+
+```json
+{
+  "toys": [
+    {
+      "id": 1,
+      "name": "Woody",
+      "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
+      "likes": 8
+    },
+    {
+      "id": 2,
+      "name": "Buzz Lightyear",
+      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
+      "likes": 14
+    }
+  ]
+}
+```
+
+Then, assuming you have `json-server` installed globally, you can run this
+command to run the server:
+
+```console
+$ json-server --watch db.json
+```
+
+Whatever top-level keys exist in your `db.json` file will determine the routes
+available. In the example above, since we have a key of `toys` pointing to an
+array of toy objects, `json-server` will generate the following routes:
+
+- `GET /toys`
+- `POST /toys`
+- `GET /toys/:id`
+- `PATCH /toys/:id`
+- `DELETE /toys/:id`
+
+You can consult the [json-server docs][] for more information.
+
+[json-server docs]: https://www.npmjs.com/package/json-server
+
+## Resources
+
+- [Public APIs](https://github.com/public-apis/public-apis)
+- [Fun APIs](https://apilist.fun/)
+- [json-server][]
+
+[json-server]: https://www.npmjs.com/package/json-server
+[event-listeners]: https://developer.mozilla.org/en-US/docs/Web/Events
+[APIs]:  https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
